@@ -1,4 +1,4 @@
-# Proyecto TP3 JS
+# Proyecto TP JS
 
 ## Descripción
 
@@ -46,13 +46,13 @@ Este archivo contiene el código JavaScript para:
 1. **Clona el repositorio**:
 
     ```bash
-    git clone https://github.com/XxFabio24xX/TP3JavaScript.git
+    git clone https://github.com/XxFabio24xX/TPJavaScript.git
     ```
 
 2. **Navega al directorio del proyecto**:
 
     ```bash
-    cd TP3JavaScript
+    cd TPJavaScript
     ```
 
 3. **Instala las dependencias con Vite**:
