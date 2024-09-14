@@ -1,108 +1,108 @@
 // Ejercicio 1: Introducción a JavaScript
 function ejecutarIntroduccionJS() {
-    console.log("==========1. Introducción a JavaScript==========");
-    let a = 5;
-    let b = 10;
-    let c = a + b;
-    console.log("El valor de a es: " + a);
-    console.log("El valor de b es: " + b);
-    console.log("La suma de a y b (c) es: " + c);
+  console.log("==========1. Introducción a JavaScript==========");
+  let a = 5;
+  let b = 10;
+  let c = a + b;
+  console.log("El valor de a es: " + a);
+  console.log("El valor de b es: " + b);
+  console.log("La suma de a y b (c) es: " + c);
   
-    let nombre = prompt("Por favor, ingresa tu nombre:");
-    console.log("Hola, " + nombre + "!");
+  let nombre = prompt("Por favor, ingresa tu nombre:");
+  console.log("Hola, " + nombre + "!");
+}
+// Ejercicio 2: Operadores Lógicos y Funcionales
+function ejecutarOperadoresLogicos() {
+  console.log("==========2. Operadores Lógicos y Funcionales==========");
+  let a = 8;
+  let b = 10;
+  let c = (a > b) ? a : b;
+  console.log("a= "+a);
+  console.log("b= "+b);
+  console.log("El mayor valor entre a y b es: " + c);
+
+  let numeroIngresado = prompt("Ingresa un número y te diré si es par o impar:");
+  numeroIngresado = Number(numeroIngresado);
+  if (numeroIngresado % 2 === 0) {
+    console.log("El número " + numeroIngresado + " es par.");
+  } else {
+    console.log("El número " + numeroIngresado + " es impar.");
   }
+}
   
-  // Ejercicio 2: Operadores Lógicos y Funcionales
-  function ejecutarOperadoresLogicos() {
-    console.log("==========2. Operadores Lógicos y Funcionales==========");
-    let a = 8;
-    let b = 10;
-    let c = (a > b) ? a : b;
-    console.log("a= "+a);
-    console.log("b= "+b);
-    console.log("El mayor valor entre a y b es: " + c);
-  
-    let numeroIngresado = prompt("Ingresa un número y te diré si es par o impar:");
-    numeroIngresado = Number(numeroIngresado);
-    if (numeroIngresado % 2 === 0) {
-      console.log("El número " + numeroIngresado + " es par.");
-    } else {
-      console.log("El número " + numeroIngresado + " es impar.");
-    }
+// Ejercicio 3: Operadores de Asignación y Bucles
+function ejecutarOperadoresAsignacion() {
+  console.log("==========3. Operadores de Asignación y Bucles==========");
+  let numero = 10;
+  while (numero >= 0) {
+    console.log("El valor de la variable es: " + numero);
+    numero--;
   }
+
+  let numero2;
+  do {
+    numero2 = prompt("Ingresa un número mayor a 100:");
+    numero2 = Number(numero2);
+  } while (numero2 <= 100);
+  console.log("Ingresaste un número mayor a 100: " + numero2);
+}
   
-  // Ejercicio 3: Operadores de Asignación y Bucles
-  function ejecutarOperadoresAsignacion() {
-    console.log("==========3. Operadores de Asignación y Bucles==========");
-    let numero = 10;
-    while (numero >= 0) {
-      console.log("El valor de la variable es: " + numero);
-      numero--;
-    }
-  
-    let numero2;
-    do {
-      numero2 = prompt("Ingresa un número mayor a 100:");
-      numero2 = Number(numero2);
-    } while (numero2 <= 100);
-    console.log("Ingresaste un número mayor a 100: " + numero2);
+// Ejercicio 4: Funciones
+function ejecutarFunciones() {
+  console.log("==========4. Funciones en JavaScript==========");
+  function esPar(numero) {
+    return "El número " + numero + " es par: " + (numero % 2 === 0);
   }
-  
-  // Ejercicio 4: Funciones
-  function ejecutarFunciones() {
-    console.log("==========4. Funciones en JavaScript==========");
-    function esPar(numero) {
-      return "El número " + numero + " es par: " + (numero % 2 === 0);
-    }
-    console.log(esPar(8));
-    console.log(esPar(7));
-  
-    function convertirCelsiusAFahrenheit(celsius) {
-      return celsius + "°C son equivalentes a " + (celsius * 1.8 + 32) + "°F";
-    }
-    console.log(convertirCelsiusAFahrenheit(30));
+  console.log(esPar(8));
+  console.log(esPar(7));
+
+  function convertirCelsiusAFahrenheit(celsius) {
+    return celsius + "°C son equivalentes a " + (celsius * 1.8 + 32) + "°F";
   }
+  console.log(convertirCelsiusAFahrenheit(30));
+}
   
-  // Ejercicio 5: Objetos en JavaScript
-  function ejecutarObjetos() {
-    console.log("==========5. Objetos en JavaScript==========");
-    let persona = {
-      nombre: "Ana",
-      edad: 30,
-      ciudad: "Buenos Aires",
-      cambiarCiudad: function (nuevaCiudad) {
-        this.ciudad = nuevaCiudad;
-      }
-    };
-    console.log(`Persona: ${persona.nombre}, Edad: ${persona.edad}, Ciudad: ${persona.ciudad}`);
-    persona.cambiarCiudad("Mendoza");
-    console.log(`Actualizado -> Persona: ${persona.nombre}, Ciudad: ${persona.ciudad}`);
-  
-    let libro = {
-      titulo: "El Quijote",
-      autor: "Miguel de Cervantes",
-      año: 1605,
-      esAntiguo: function () {
-        let añoActual = new Date().getFullYear();
-        return (añoActual - this.año) > 10;
-      }
-    };
-    console.log(`El libro "${libro.titulo}" es antiguo: ${libro.esAntiguo()}`);
-  }
-  
-  // Ejercicio 6: Arrays
-  function ejecutarArrays() {
-    console.log("==========6. Arrays==========");
-    let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
-    let numerosMultiplicados = numeros.map(n => n * 2);
-    console.log("Números multiplicados por 2: " + numerosMultiplicados.join(","));
-  
-    let pares = [];
-    for (let i = 1; i <= 20; i++) {
-      if (i % 2 === 0) pares.push(i);
+// Ejercicio 5: Objetos en JavaScript
+function ejecutarObjetos() {
+  console.log("==========5. Objetos en JavaScript==========");
+  let persona = {
+    nombre: "Ana",
+    edad: 30,
+    ciudad: "Buenos Aires",
+    cambiarCiudad: function (nuevaCiudad) {
+      this.ciudad = nuevaCiudad;
     }
-    console.log("Primeros 10 números pares: " + pares.join(","));
-  }  
+  };
+  console.log(`Persona: ${persona.nombre}, Edad: ${persona.edad}, Ciudad: ${persona.ciudad}`);
+  persona.cambiarCiudad("Mendoza");
+  console.log(`Actualizado -> Persona: ${persona.nombre}, Ciudad: ${persona.ciudad}`);
+
+  let libro = {
+    titulo: "El Quijote",
+    autor: "Miguel de Cervantes",
+    año: 1605,
+    esAntiguo: function () {
+      let añoActual = new Date().getFullYear();
+      return (añoActual - this.año) > 10;
+    }
+  };
+  console.log(`El libro "${libro.titulo}" es antiguo: ${libro.esAntiguo()}`);
+}
+  
+// Ejercicio 6: Arrays
+function ejecutarArrays() {
+  console.log("==========6. Arrays==========");
+  let numeros = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+  console.log("Numeros originales: "+ numeros.join(","));
+  let numerosMultiplicados = numeros.map(n => n * 2);
+  console.log("Números multiplicados por 2: " + numerosMultiplicados.join(","));
+
+  let pares = [];
+  for (let i = 1; i <= 20; i++) {
+    if (i % 2 === 0) pares.push(i);
+  }
+  console.log("Primeros 10 números pares: " + pares.join(","));
+}  
 
 //Introduccion al DOM
 //Ejercicio 1
